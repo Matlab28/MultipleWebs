@@ -33,23 +33,24 @@
                 padding-top: 20px;
             }
             .header {
-                font-size: 48px;
+                font-size: 48px; 
                 white-space: normal;
                 margin-bottom: 20px;
             }
         }
         .container {
-            position: relative;
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
             padding: 20px;
-            border: 2px solid transparent;
+            border: 2px solid transparent; 
             border-image: linear-gradient(45deg, #ff4081, #007bff);
             border-image-slice: 1;
             border-radius: 15px 15px 0 0;
             background-color: #121212;
             text-align: center;
+            margin-top: 20px;
         }
         .button {
             display: block;
@@ -86,23 +87,56 @@
 
 <!-- body {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
+            justify-content: center;
             height: 100vh;
             margin: 0;
             background-color: #121212;
             color: #e0e0e0;
             font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+        .header {
+            font-size: 60px;
+            font-weight: bold;
+            background: linear-gradient(45deg, #ff4081, #007bff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 30px;
+            text-align: center;
+            white-space: nowrap;
+        }
+        @media (max-width: 600px) {
+            body {
+                justify-content: flex-start;
+                padding-top: 20px;
+            }
+            .header {
+                font-size: 48px;
+                white-space: normal;
+                margin-bottom: 20px;
+            }
         }
         .container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            border: 2px solid transparent;
+            border-image: linear-gradient(45deg, #ff4081, #007bff);
+            border-image-slice: 1;
+            border-radius: 15px 15px 0 0;
+            background-color: #121212;
             text-align: center;
         }
         .button {
             display: block;
-            width: 200px;
-            padding: 15px;
+            width: 250px;
+            padding: 20px;
             margin: 10px auto;
-            font-size: 16px;
+            font-size: 18px;
             color: #fff;
             background: linear-gradient(45deg, #ff4081, #007bff);
             border: none;
