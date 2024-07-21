@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main Page</title>
     <style>
-       body {
+        body {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -15,39 +15,34 @@
             background-color: #121212;
             color: #e0e0e0;
             font-family: Arial, sans-serif;
-            overflow: hidden;
-            box-sizing: border-box;
-            padding: 0 20px;
         }
         .header {
-            font-size: 60px;
+            font-size: 60px; /* Increased font size for larger screens */
             font-weight: bold;
             background: linear-gradient(45deg, #ff4081, #007bff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
             text-align: center;
-            white-space: nowrap;
+            white-space: nowrap; /* Prevent wrapping on larger screens */
         }
+        /* Media query for mobile devices */
         @media (max-width: 600px) {
             .header {
-                font-size: 48px;
-                white-space: normal;
-                margin-bottom: 15px;
+                font-size: 48px; /* Increased font size for smaller screens */
+                white-space: normal; /* Allow wrapping */
             }
         }
         .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            position: relative;
+            display: inline-block;
             padding: 20px;
-            border: 2px solid transparent;
+            border: 2px solid transparent; /* Transparent border to show the gradient border */
             border-image: linear-gradient(45deg, #ff4081, #007bff);
             border-image-slice: 1;
-            border-radius: 15px 15px 0 0;
+            border-radius: 15px 15px 0 0; /* Rounded top-left and top-right corners */
             background-color: #121212;
             text-align: center;
-            box-sizing: border-box;
         }
         .button {
             display: block;
@@ -58,10 +53,9 @@
             color: #fff;
             background: linear-gradient(45deg, #ff4081, #007bff);
             border: none;
-            border-radius: 15px;
+            border-radius: 15px; /* Rounded corners for buttons */
             cursor: pointer;
             transition: background 0.3s ease;
-            box-sizing: border-box;
         }
         .button:hover {
             background: linear-gradient(45deg, #ff79b0, #0056b3);
