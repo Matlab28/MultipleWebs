@@ -7,6 +7,70 @@
     <style>
         body {
             display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            font-size: 36px;
+            font-weight: bold;
+            background: linear-gradient(45deg, #ff4081, #007bff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .container {
+            position: relative;
+            display: inline-block;
+            padding: 20px;
+            border: 5px solid;
+            border-image: linear-gradient(45deg, #ff4081, #007bff);
+            border-image-slice: 1;
+            border-radius: 15px;
+            background-color: #121212;
+            text-align: center;
+        }
+        .button {
+            display: block;
+            width: 250px;
+            padding: 20px;
+            margin: 10px auto;
+            font-size: 18px;
+            color: #fff;
+            background: linear-gradient(45deg, #ff4081, #007bff);
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .button:hover {
+            background: linear-gradient(45deg, #ff79b0, #0056b3);
+        }
+    </style>
+</head>
+<body>
+<div class="header">Welcome Back!</div>
+<div class="container">
+    <button class="button" onclick="navigateTo('budget')">Budget Planner</button>
+    <button class="button" onclick="navigateTo('travel')">Travel Planner</button>
+    <button class="button" onclick="navigateTo('mail')">Mail Reminder</button>
+</div>
+<script>
+    function navigateTo(page) {
+        window.location.href = page + '/' + page + '.html';
+    }
+</script>
+</body>
+</html>
+
+<!-- body {
+            display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
@@ -33,19 +97,4 @@
         }
         .button:hover {
             background: linear-gradient(45deg, #ff79b0, #0056b3);
-        }
-    </style>
-</head>
-<body>
-<div class="container">
-    <button class="button" onclick="navigateTo('budget')">Budget Planner</button>
-    <button class="button" onclick="navigateTo('travel')">Travel Planner</button>
-    <button class="button" onclick="navigateTo('mail')">Mail Reminder</button>
-</div>
-<script>
-    function navigateTo(page) {
-        window.location.href = page + '/' + page + '.html';
-    }
-</script>
-</body>
-</html>
+        } -->
