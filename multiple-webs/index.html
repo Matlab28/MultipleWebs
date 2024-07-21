@@ -17,22 +17,30 @@
             font-family: Arial, sans-serif;
         }
         .header {
-            font-size: 36px;
+            font-size: 60px; /* Increased font size for larger screens */
             font-weight: bold;
             background: linear-gradient(45deg, #ff4081, #007bff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 30px;
             text-align: center;
+            white-space: nowrap; /* Prevent wrapping on larger screens */
+        }
+        /* Media query for mobile devices */
+        @media (max-width: 600px) {
+            .header {
+                font-size: 48px; /* Increased font size for smaller screens */
+                white-space: normal; /* Allow wrapping */
+            }
         }
         .container {
             position: relative;
             display: inline-block;
             padding: 20px;
-            border: 5px solid;
+            border: 2px solid transparent; /* Transparent border to show the gradient border */
             border-image: linear-gradient(45deg, #ff4081, #007bff);
             border-image-slice: 1;
-            border-radius: 15px;
+            border-radius: 15px 15px 0 0; /* Rounded top-left and top-right corners */
             background-color: #121212;
             text-align: center;
         }
@@ -45,7 +53,7 @@
             color: #fff;
             background: linear-gradient(45deg, #ff4081, #007bff);
             border: none;
-            border-radius: 15px;
+            border-radius: 15px; /* Rounded corners for buttons */
             cursor: pointer;
             transition: background 0.3s ease;
         }
@@ -55,7 +63,7 @@
     </style>
 </head>
 <body>
-<div class="header">Welcome Back!</div>
+<div class="header">Welcome <br> Back!</div>
 <div class="container">
     <button class="button" onclick="navigateTo('budget')">Budget Planner</button>
     <button class="button" onclick="navigateTo('travel')">Travel Planner</button>
